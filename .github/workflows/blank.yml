@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Cache
+        uses: actions/cache@v4.0.2
       - name: Run a one-line script
         run: echo Hello, world!
       - name: Run a multi-line script
@@ -18,7 +20,6 @@ jobs:
           git config --global init.defaultBranch main
           git config --global user.name "Mohamed Hisham Abdelzaher"
           git config --global user.email "mohamed.hisham.abdelzaher@gmail.com"
-          git init
           git remote add origin https://github.com/MH0386/space_apps_2024_seismic_detection.git
           git branch -M main
           git push -u origin main
