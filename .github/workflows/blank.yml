@@ -11,6 +11,7 @@ jobs:
       - name: Cache
         uses: actions/cache@v4.0.2
         with:
+          path: .
           key: ${{ runner.os }}-git-${{ hashFiles('**/pubspec.lock') }}
           restore-keys: ${{ runner.os }}-git-
       - name: Run a one-line script
