@@ -24,5 +24,4 @@ jobs:
           git config --global init.defaultBranch main
           git config --global user.name "Mohamed Hisham Abdelzaher"
           git config --global user.email "mohamed.hisham.abdelzaher@gmail.com"
-          git remote add origin https://github.com/MH0386/space_apps_2024_seismic_detection.git
           git push -f
