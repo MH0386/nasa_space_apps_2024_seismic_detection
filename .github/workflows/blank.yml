@@ -12,9 +12,12 @@ jobs:
         run: echo Hello, world!
       - name: Run a multi-line script
         run: |
-          wget https://wufs.wustl.edu/SpaceApps/data/space_apps_2024_seismic_detection.zip
+          wget --progress=dot:giga https://wufs.wustl.edu/SpaceApps/data/space_apps_2024_seismic_detection.zip
           unzip space_apps_2024_seismic_detection
           cd space_apps_2024_seismic_detection
+          git config --global init.defaultBranch main
+          git config --global user.name "Mohamed Hisham Abdelzaher"
+          git config --global user.email "mohamed.hisham.abdelzaher@gmail.com"
           git init
           git remote add origin https://github.com/MH0386/space_apps_2024_seismic_detection.git
           git branch -M main
