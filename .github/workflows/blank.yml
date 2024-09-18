@@ -8,20 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Cache
-        uses: actions/cache@v4.0.2
-        with:
-          path: .
-          key: ${{ runner.os }}-git-${{ hashFiles('**/pubspec.lock') }}
-          restore-keys: ${{ runner.os }}-git-
-      - name: Run a one-line script
-        run: echo Hello, world!
-      - name: Run a multi-line script
+      - name: Download Data
         run: |
           wget --progress=dot:giga https://wufs.wustl.edu/SpaceApps/data/space_apps_2024_seismic_detection.zip
           unzip space_apps_2024_seismic_detection
           cd space_apps_2024_seismic_detection
-          git config --global init.defaultBranch main
+          mv * ../
+          pwd
+      - name: Upload Data
+        run: |
           git config --global user.name "Mohamed Hisham Abdelzaher"
           git config --global user.email "mohamed.hisham.abdelzaher@gmail.com"
+          git add .
+          git commit -m "init"
           git push -f
