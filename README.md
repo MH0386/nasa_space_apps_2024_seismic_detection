@@ -1,4 +1,4 @@
-Welcome, Space Apps challengers, to ìSeismic Detection across the Solar Systemî. 
+# Welcome, Space Apps challengers, to ‚ÄúSeismic Detection across the Solar System‚Äù. 
 
 Today, we challenge YOU to parse through seismic data collected on the Moon and Mars and figure out how to detect moonquakes and marsquakes! 
 To get you started on the data, we present to you a training set containing the following:
@@ -14,12 +14,11 @@ Each trace included in the test folder has a quake in it, there are no empty tra
 
 This main folder also has a Jupyter notebook that will help you get started on the data.
 
-** IMPORTANT **
+## **IMPORTANT**
+
 Please make sure that your output catalog has at least the following headers:
 filename
 time_abs(%Y-%m-%dT%H:%M:%S.%f) or time_rel(sec)
-
 If not, your output catalog may not be scored!!
-** IMPORTANT **
 
 Good luck!!! If you have any questions, our team leaders will be around to help during the hackathon weekend!  
