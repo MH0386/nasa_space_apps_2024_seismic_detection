@@ -15,6 +15,9 @@ jobs:
           cd space_apps_2024_seismic_detection
           mv * ../
           pwd
+      - run: |
+          pwd
+          ls -a
       - name: Upload Data
         run: |
           git config --global user.name "Mohamed Hisham Abdelzaher"
