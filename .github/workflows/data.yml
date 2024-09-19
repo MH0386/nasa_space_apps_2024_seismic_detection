@@ -26,4 +26,5 @@ jobs:
           git config --global user.email "mohamed.hisham.abdelzaher@gmail.com"
           git add .
           git commit -m "init"
-          git push 
+          git pull -v
+          git push -v
