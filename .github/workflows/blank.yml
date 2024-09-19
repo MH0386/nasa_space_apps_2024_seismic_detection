@@ -25,6 +25,7 @@ jobs:
         run: |
           git config --global user.name "Mohamed Hisham Abdelzaher"
           git config --global user.email "mohamed.hisham.abdelzaher@gmail.com"
+          git lfs install
           git add .
           git commit -m "init"
           git push -f
