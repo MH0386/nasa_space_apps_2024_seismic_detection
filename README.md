@@ -14,12 +14,12 @@ Each trace included in the test folder has a quake in it, there are no empty tra
 
 This main folder also has a Jupyter notebook that will help you get started on the data.
 
-** IMPORTANT **
+**IMPORTANT**
 Please make sure that your output catalog has at least the following headers:
 filename
 time_abs(%Y-%m-%dT%H:%M:%S.%f) or time_rel(sec)
 
 If not, your output catalog may not be scored!!
-** IMPORTANT **
+**IMPORTANT**
 
 Good luck!!! If you have any questions, our team leaders will be around to help during the hackathon weekend!  
