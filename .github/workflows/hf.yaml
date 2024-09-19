@@ -1,0 +1,22 @@
+name: Upload to HuggingFace
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Login to HuggingFace Hub
+        uses: osbm/huggingface-login@v0.0.2
+        with:
+          username: MH0386
+          key: ${{ secrets.HF_KEY }}
+          add_to_git_credentials: true
+      - name: Enable hf_transfer
+        run: pip install huggingface_hub[hf_transfer]
+      - name: Check if logged in
+        run: huggingface-cli whoami
+      - name: Upload
+        run: huggingface-cli upload MH0386/nasa_space_apps_2024_seismic_detection . --repo-type dataset
