@@ -18,6 +18,9 @@ jobs:
       - run: |
           pwd
           ls -a
+      - run: |
+          rm space_apps_2024_seismic_detection.zip
+          ls -a
       - name: Upload Data
         run: |
           git config --global user.name "Mohamed Hisham Abdelzaher"
